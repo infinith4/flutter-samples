@@ -84,6 +84,7 @@ class _PlatformAdaptingHomePageState extends State<PlatformAdaptingHomePage> {
   // for this, the app folds its fourth tab (the settings page) into the
   // third tab. This is a common pattern on iOS.
   Widget _buildIosHomePage(BuildContext context) {
+    //フッターのタブの表示
     return CupertinoTabScaffold(
       tabBar: CupertinoTabBar(
         items: const [
@@ -105,15 +106,16 @@ class _PlatformAdaptingHomePageState extends State<PlatformAdaptingHomePage> {
         assert(index <= 2 && index >= 0, 'Unexpected tab index: $index');
         return switch (index) {
           0 => CupertinoTabView(
-              defaultTitle: SongsTab.title,
+              defaultTitle: "aaaaa", //画面左上のタイトル
+              // defaultTitle: SongsTab.title,
               builder: (context) => SongsTab(key: songsTabKey),
             ),
           1 => CupertinoTabView(
-              defaultTitle: NewsTab.title,
+              defaultTitle: "NewsTab.title11", //画面左上のタイトル
               builder: (context) => const NewsTab(),
             ),
           2 => CupertinoTabView(
-              defaultTitle: ProfileTab.title,
+              defaultTitle: "ProfileTab.title",
               builder: (context) => const ProfileTab(),
             ),
           _ => const SizedBox.shrink(),

@@ -167,7 +167,7 @@ class HeroAnimatingSongCard extends StatelessWidget {
           color: color,
           flattenAnimation: heroAnimation,
           child: SizedBox(
-            height: 250,
+            height: 100, //NOTE: Cardの高さ
             child: Stack(
               alignment: Alignment.center,
               children: [
@@ -180,32 +180,34 @@ class HeroAnimatingSongCard extends StatelessWidget {
                     height: 80,
                     color: Colors.black12,
                     alignment: Alignment.centerLeft,
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 25), //NOTE: 左の幅
                     child: Text(
-                      song,
+                      "17:21", //NOTE: Songs タブのタイトル
                       style: const TextStyle(
-                        fontSize: 21,
+                        fontSize: 41,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),
                 ),
+                //NOTE: 再生アイコン
                 // The play button grows in the hero animation.
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 45) *
-                      (1 - heroAnimation.value),
-                  child: Container(
-                    height: playButtonSize,
-                    width: playButtonSize,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.black12,
-                    ),
-                    alignment: Alignment.center,
-                    child: Icon(Icons.play_arrow,
-                        size: playButtonSize, color: Colors.black38),
-                  ),
-                ),
+                // Padding(
+                //   padding: const EdgeInsets.only(bottom: 45) *
+                //       (1 - heroAnimation.value),
+                //   child: Container(
+                //     height: playButtonSize,
+                //     width: playButtonSize,
+                //     decoration: const BoxDecoration(
+                //       shape: BoxShape.circle,
+                //       color: Colors.black12,
+                //     ),
+                //     alignment: Alignment.center,
+                //     child: Icon(Icons.play_arrow,
+                //         size: playButtonSize, color: Colors.black38),
+                //   ),
+                // ),
               ],
             ),
           ),
@@ -237,6 +239,7 @@ class SongPlaceholderTile extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.only(left: 12),
             ),
+            //NOTE: 黒い文字で埋める（You might also like以下の箇所）
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
