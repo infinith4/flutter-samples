@@ -177,18 +177,27 @@ class HeroAnimatingSongCard extends StatelessWidget {
                   left: 0,
                   right: 0,
                   child: Container(
-                    height: 80,
+                    height: 100,
                     color: Colors.black12,
                     alignment: Alignment.centerLeft,
                     padding:
                         const EdgeInsets.symmetric(horizontal: 25), //NOTE: 左の幅
-                    child: Text(
-                      "17:21", //NOTE: Songs タブのタイトル
-                      style: const TextStyle(
-                        fontSize: 41,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
+                        child: Row(
+                          children: [
+                            Text(
+                              "17:21",
+                              style: const TextStyle(
+                                fontSize: 41,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            const Spacer(),
+                            Switch.adaptive(
+                              value: true,
+                              onChanged: (value) => true,
+                            ),
+                          ],
+                        ),
                   ),
                 ),
                 //NOTE: 再生アイコン

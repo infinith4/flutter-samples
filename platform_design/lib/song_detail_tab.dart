@@ -69,7 +69,7 @@ class SongDetailTab extends StatelessWidget {
                       ),
                     ),
                   ),
-                _ => const SongPlaceholderTile(),
+                _ => const SongPlaceholderTile(),  //NOTE: widgets.dart の黒塗りの箇所
               },
             ),
           ),

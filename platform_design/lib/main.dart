@@ -106,7 +106,7 @@ class _PlatformAdaptingHomePageState extends State<PlatformAdaptingHomePage> {
         assert(index <= 2 && index >= 0, 'Unexpected tab index: $index');
         return switch (index) {
           0 => CupertinoTabView(
-              defaultTitle: "aaaaa", //画面左上のタイトル
+              defaultTitle: "Alerm", //画面左上のタイトル
               // defaultTitle: SongsTab.title,
               builder: (context) => SongsTab(key: songsTabKey),
             ),
